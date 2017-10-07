@@ -1,0 +1,33 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="blue-header">
+    <ion-title text-center >
+      <img style="height: 100%;vertical-align: middle;" src="../../assets/img/logo_50.png">18app
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding [class]="actualBack.background_img" text-center style="color:white">
+  <h1 class="margin-top-50">Hai 18 anni?</h1>
+  <span stye="margin-top:0px">Per te</span>
+  <h1 style="font-weight:bold; margin-top:0; margin-bottom:0px;font-size:40px">500€</h1>
+  <span stye="margin-top:0px">da spendere in</span>
+  <h2>{{actualBack.text}}</h2>
+</ion-content>
+<ion-footer>
+  <ion-item no-lines>
+      <button ion-button color="light" class="button-info" clear item-start>INFORMAZIONI</button>
+      <button ion-button color="light" class="button-info" clear item-end>NON HAI SPID?</button>
+  </ion-item>
+  <button ion-button full large style="font-weight:bold" (click)="login()">
+      <ion-icon name="spid-ico"></ion-icon>&emsp;ENTRA CON SPID
+    </button>
+</ion-footer>
