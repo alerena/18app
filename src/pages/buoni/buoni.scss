@@ -1,0 +1,16 @@
+page-buoni {
+    .item-type{
+        font-size: 30px;
+        padding: 24px;
+    }
+
+    .spent{
+        color:gray;
+    }
+    .spent .item-right{
+        text-decoration: line-through;
+    }
+    .item-buoni .buoni-button{
+        background-color: transparent;
+    }
+}
