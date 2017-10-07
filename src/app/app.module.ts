@@ -6,7 +6,7 @@ import { MyApp } from './app.component';
 /*import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';*/
 import { TabsPage } from '../pages/pageContainer/tabs/tabs';
-import { BuoniPage } from '../pages/buoni/buoni';
+import { BuoniPage } from '../pages/pageContainer/buoni/buoni';
 import { DettaglioBuoniPage } from '../pages/dettaglio-buoni/dettaglio-buoni';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +19,7 @@ import { HttpModule } from '@angular/http';
     /*AboutPage,
     ContactPage,
     TabsPage
-    BuoniPage
+    BuoniPage*/
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,7 @@ import { HttpModule } from '@angular/http';
     /*AboutPage,
     ContactPage,
     TabsPage
-    BuoniPage
+    BuoniPage*/
   ],
   providers: [
     StatusBar,

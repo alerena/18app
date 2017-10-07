@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { BuoniService } from '../../services/buoni.service';
-import {Buoni} from '../../models/buoni';
+import { BuoniService } from '../../../services/buoni.service';
+import {Buoni} from '../../../models/buoni';
 
 
 @IonicPage()
