@@ -5,17 +5,17 @@ import { MyApp } from './app.component';
 
 /*import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';*/
-import { TabsPage } from '../pages/pageContainer/tabs/tabs';
-import { BuoniPage } from '../pages/pageContainer/buoni/buoni';
-import { DettaglioBuoniPage } from '../pages/dettaglio-buoni/dettaglio-buoni';
+import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+import {MerchantDetailComponent} from '../pages/merchants/merchant-detail/merchant-detail.component'
 
 @NgModule({
   declarations: [
     MyApp,
-    TabsPage
+    TabsPage,
+   MerchantDetailComponent
     /*AboutPage,
     ContactPage,
     TabsPage
@@ -29,7 +29,8 @@ import { HttpModule } from '@angular/http';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    TabsPage
+    TabsPage,
+    MerchantDetailComponent
     /*AboutPage,
     ContactPage,
     TabsPage
