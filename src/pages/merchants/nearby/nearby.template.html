@@ -1,0 +1,7 @@
+<button ion-item *ngFor="let merchant of merchants" (click)="onMerchantSelect()">
+        {{ merchant.name }} <p>Tipologia</p>
+                <ion-note item-right>
+                          {{merchant.distance}}
+                      </ion-note>
+        <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+</button>  

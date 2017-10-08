@@ -13,3 +13,4 @@ import {HomeDetailPageModule} from './homeDetail/home-detail.module';
   //exports: [HomePage]
 })
 export class HomePageModule {}
+
