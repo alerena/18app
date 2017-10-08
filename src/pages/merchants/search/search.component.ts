@@ -13,20 +13,36 @@ import { MerchantDetailPageComponent } from '../merchant-detail/merchant-detail'
  */
 
 @Component({
-  selector: 'nearby',
-  templateUrl: 'nearby.template.html',
+  selector: 'search',
+  templateUrl: 'search.template.html',
   providers: [MerchantsService],
 })
-export class NearbyComponent implements OnInit {
+export class SearchComponent implements OnInit {
 
   private merchants: Merchant[]
+  public filter;
+  public show = true;
 
-  constructor(private merchantsService: MerchantsService, public navCtrl: NavController, public navParams: NavParams) { }
+  constructor(private merchantsService: MerchantsService, public navCtrl: NavController, public navParams: NavParams) { 
+    this.filter = {
+        type :  0
+    };
+  }
 
   ngOnInit() {
-    console.log('nearby init')
-    console.log(this.merchantsService.getMerchants())
-    this.merchants = this.merchantsService.getMerchants();
+    console.log('search init')
+   console.log(this.merchantsService.getMerchants())
+    this.merchants = []// this.merchantsService.getMerchants(); 
+  }
+
+  onSearch(filter){
+    this.show = !this.show;
+    //get filtered list
+    this.merchants = this.merchantsService.getFilteredMerchants(filter);
+  }
+
+  showSearch(){
+    this.show = !this.show;
   }
 
   onMerchantSelect(merchant) {

@@ -9,14 +9,15 @@ import {Merchant} from '../../../models/merchant.model'
   templateUrl: 'merchant-detail.template.html',
 })
 export class MerchantDetailPageComponent{
-  private merchant: Merchant;
+  public merchant: Merchant;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.merchant = this.navParams.get('merchant');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad merchant');
-   /*  console.log(JSON.stringify(this.navParams.get('merchant')))
-    this.merchant = this.navParams.get('merchant'); */
+    console.log(this.navParams)
+    //this.merchant = this.navParams.get('merchant');
   }
 
 }

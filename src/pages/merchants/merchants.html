@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>merchants</ion-title>
+    <ion-title>Merchants</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -32,40 +32,19 @@
       <div [ngSwitch]="section">
         <ion-list *ngSwitchCase="'nearby'">
           <ion-item>
-            <ion-thumbnail item-start>
-              <img src="img/thumbnail-puppy-1.jpg">
-            </ion-thumbnail>
-            <h2>nearby</h2>
+            <h2>Questa è la lista dei 10 negozi più vicini a te.</h2>
             
           </ion-item>
-          <button ion-item *ngFor="let merchant of merchants" (click)="onMerchantSelect()">
-            {{ merchant.name }} <p>Tipologia</p>
-                    <ion-note item-right>
-                              {{merchant.distance}}
-                          </ion-note>
-            <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </button>  
-          <!--<nearby></nearby>-->
+          
+          <nearby></nearby>
         </ion-list>
       
         <ion-list *ngSwitchCase="'internet'">
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="img/thumbnail-kitten-1.jpg">
-            </ion-thumbnail>
-            <h2>internet</h2>
-          </ion-item>
-          ...
+          <internet></internet>
         </ion-list>
 
         <ion-list *ngSwitchCase="'search'">
-            <ion-item>
-              <ion-thumbnail item-start>
-                <img src="img/thumbnail-kitten-1.jpg">
-              </ion-thumbnail>
-              <h2>search</h2>
-            </ion-item>
-            ...
+            <search></search>
           </ion-list>
       </div>
 

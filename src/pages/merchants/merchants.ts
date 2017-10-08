@@ -17,6 +17,8 @@ import {MerchantsService} from './merchants.service';
 })
 export class MerchantsPage {
   private merchants: Array<Merchant>;
+  public section : string = 'nearby';
+  
   constructor(public navCtrl: NavController, public navParams: NavParams, public merchantsService: MerchantsService) {
   }
 
@@ -25,18 +27,12 @@ export class MerchantsPage {
     console.log('ionViewDidLoad Merchants - page');
   }
 
-  test(){
-    console.log(JSON.stringify({}))
-       this.navCtrl.push('MerchantDetail', {
-      merchant: {}
-    });   
-  }
-
-  onMerchantSelect(){
+/* 
+  onMerchantSelect(merchant){
     console.log(JSON.stringify({}))
        this.navCtrl.push('MerchantDetailPageComponent', {
-      merchant: {}
+      merchant: merchant
     });   
-  }
+  } */
 
 }

@@ -1,0 +1,19 @@
+<ion-item>
+        <ion-label>Categorie</ion-label>
+        <ion-select [(ngModel)]="filter">
+          <ion-option value="0">Tutti</ion-option>
+          <ion-option value="1">Cinema</ion-option>
+          <ion-option value="2">Concerti</ion-option>
+          <ion-option value="3">Eventi Culturali</ion-option>
+          <ion-option value="4">Libri</ion-option>
+          <ion-option value="5">Musei, monumenti, parchi naturali</ion-option>
+          <ion-option value="6">Teatro e Danza</ion-option>
+        </ion-select>
+      </ion-item>
+      <button ion-item *ngFor="let merchant of merchants | merchantTypePipe:filter" (click)="onMerchantSelect(merchant)">
+            <p>{{merchant.name}}</p>
+            {{merchant.type.value}}
+            <p>{{merchant.url}}</p>  
+                
+            <ion-icon name="ios-arrow-forward" item-right></ion-icon>
+    </button>      

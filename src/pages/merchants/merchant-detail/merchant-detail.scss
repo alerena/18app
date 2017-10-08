@@ -1,0 +1,15 @@
+merchant-detail{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 800;
+    h1{
+    font-weight: 800;
+    
+    }
+    h4{ 
+        font-size: 20px;
+        color: map-get($colors, primary);
+    }
+        .background-image{
+            background:linear-gradient(0deg,rgba(0,89,179,0.3),rgba(0,89,179,0.8)),url('../assets/img/books.jpg');
+        }
+}
