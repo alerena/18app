@@ -1,0 +1,32 @@
+merchant-detail{
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 800;
+    h1{
+    font-weight: 800;
+    
+    }
+    h4{ 
+        font-size: 20px;
+        color: map-get($colors, primary);
+    }
+        .background-image{
+            background:linear-gradient(0deg,rgba(0,89,179,0.3),rgba(0,89,179,0.8)),url('../assets/img/books.jpg');
+        }
+
+        button h2, button p{
+            color: blue !important;
+        }
+        button h2{
+                font-weight: bold !important;
+                font-size: 20px !important;
+        }
+
+        .transparent{
+            background: transparent !important;
+        }
+
+        ion-item p{
+            color: white !important;
+        }
+
+    }

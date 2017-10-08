@@ -1,0 +1,42 @@
+<span padding [hidden]="!show">
+      
+        <ion-item>
+            <ion-label>Categorie</ion-label>
+            <ion-select [(ngModel)]="filter.type">
+                <ion-option value="0">Tutti</ion-option>
+                <ion-option value="1">Cinema</ion-option>
+                <ion-option value="2">Concerti</ion-option>
+                <ion-option value="3">Eventi Culturali</ion-option>
+                <ion-option value="4">Libri</ion-option>
+                <ion-option value="5">Musei, monumenti, parchi naturali</ion-option>
+                <ion-option value="6">Teatro e Danza</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" floating>Scegli il comune</ion-label>
+          <ion-input [(ngModel)]="filter.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" floating>Cerca nel nome</ion-label>
+            <ion-input [(ngModel)]="filter.town"></ion-input>
+        </ion-item>
+      
+        <!-- <ion-item>
+          <ion-input placeholder="Clear Input" clearInput></ion-input>
+        </ion-item> -->
+        <button ion-button full style="margin-bottom: 30px;" (click)="onSearch()" [disabled]="!filter.name && !filter.type">Cerca</button>
+    </span>
+<span padding [hidden]="show">
+
+<button ion-item>
+        <ion-icon name="search" (click)="showSearch()" item-right></ion-icon>
+</button>    
+<button ion-item *ngFor="let merchant of merchants" (click)="onMerchantSelect(merchant)">
+    <h2>{{ merchant.name }} </h2>
+    <p>{{merchant.type.value}}</p>
+            <ion-note item-right>
+                        {{merchant.distance}}
+                    </ion-note>
+    <ion-icon color="primary" name="ios-arrow-forward" item-right></ion-icon>
+</button>  
+    </span>

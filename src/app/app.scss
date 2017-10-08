@@ -14,12 +14,14 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-@font-face {
+/* @font-face {
     font-family: 'Titillium Web';
     font-style: normal;
-    font-weight: 200;
-    src: local('Titillium WebRegular'), local('TitilliumWeb-Regular'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr-K9kSItTeDn2USN0q77Oh4.woff) format('woff');
- }
+    font-weight: 800;
+    src: local('Titillium WebThin'), local('TitilliumWeb-Thin'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr-K9kSItTeDn2USN0q77Oh4.woff) format('woff');
+ 
+} */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
  ion-icon {
     &[class*="spid-ico"] { 
@@ -32,12 +34,13 @@
     } 
 }
 
-.transparent{
-    background: transparent;
-    color: white;
-    text-align:right;
+*{
+    font-family: 'Titillium Web';
+    font-style: normal;
+   
+}
 
-    p{
-        color: white !important;
-    }
+.transparent{
+    color: white;
+    background: transparent;
 }

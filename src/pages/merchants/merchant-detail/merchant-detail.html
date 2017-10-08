@@ -1,1 +1,61 @@
-merchantDetailTemplate
+<ion-header>
+    
+    <ion-navbar color="blue-header">
+        <ion-title text-left>
+          Negozio
+        </ion-title>
+        <ion-buttons start style="margin-right:0">
+          <button ion-item icon-only color="royal" class="transparent" no-lines (click)="goToHome()">
+            <h1 style="font-size:15px">Credito</h1>
+            <p style="font-size:15px;font-weight:bold;color:white !important">{{user.credito}}€</p>
+          </button>
+        </ion-buttons>
+        <ion-buttons end>
+          <button style="padding:0" ion-item icon-only color="royal" class="transparent" no-lines (click)="openMenu()">
+            <ion-icon item-right name="person" no-padding></ion-icon>
+            <ion-badge item-end color="danger">2</ion-badge>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+    
+</ion-header>
+    <ion-content padding class="background-image">
+       
+        
+        <ion-grid class="transparent">
+                <ion-row class="transparent">
+                        <ion-col col-12 style="color:white">
+                                <p>{{merchant.type.value}}</p>
+                        </ion-col>
+                        <ion-col col-12 style="margin-top:50px; color:white" class="transparent">
+                            <h1>{{merchant.name | uppercase}}</h1>
+                            <ion-item class="transparent" no-lines color="light">
+                              <ion-icon name="pin" item-left></ion-icon>
+                                <p>{{merchant.address}}</p>
+                                <p>{{merchant.town}}</p>
+                            </ion-item>
+                              
+                                <!-- <ion-icon name="pin"></ion-icon> -->
+                        </ion-col>
+                </ion-row>
+              </ion-grid>
+             
+           </ion-content> 
+          <ion-footer padding style="background-color:white">
+                
+                <button ion-button full large style="font-weight:bold">
+                        <ion-icon name="ios-add-circle-outline" style="margin-right:5px"></ion-icon>Nuovo Buono
+                  </button>
+                <ion-grid>
+                  <ion-row>
+                        <ion-col col-6 text-center>
+                          <h4> <ion-icon name="md-map"></ion-icon> MAPPA</h4>
+                        </ion-col>
+                        <ion-col col-6 text-center>
+                          <h4> <ion-icon name="md-map"></ion-icon> PERCORSO</h4>
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+              </ion-footer>
+
+              
