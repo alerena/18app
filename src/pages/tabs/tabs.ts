@@ -4,7 +4,9 @@ import { ContactPage } from '../contact/contact';
 import { BuoniPage } from '../buoni/buoni';
 import {MenuController} from 'ionic-angular';
 import {MerchantsPage} from '../merchants/merchants';
+import {IonicPage} from 'ionic-angular';
 
+@IonicPage()
 @Component({
   templateUrl: 'tabs.html'
 })

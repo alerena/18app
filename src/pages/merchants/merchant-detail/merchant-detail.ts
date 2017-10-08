@@ -3,12 +3,12 @@ import { IonicPage,
   NavController, NavParams } from 'ionic-angular';
 import {Merchant} from '../../../models/merchant.model'
 
-
+@IonicPage()
 @Component({
   selector: 'merchant-detail',
   templateUrl: 'merchant-detail.template.html',
 })
-export class MerchantDetailComponent{
+export class MerchantDetailPageComponent{
   private merchant: Merchant;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

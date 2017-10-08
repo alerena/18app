@@ -1,19 +1,16 @@
-/* import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import {MerchantDetailComponent} from './merchant-detail.component';
+import {MerchantDetailPageComponent} from './merchant-detail';
 
 @NgModule({
   declarations: [
-MerchantDetailComponent
+    MerchantDetailPageComponent
   ],
   imports: [
-    IonicPageModule.forChild(MerchantDetailComponent)
-  ],
-    entryComponents: [
-   // MerchantsPage,
-   // MerchantDetailComponent
-  ]   
+    IonicPageModule.forChild(MerchantDetailPageComponent)
+  ] ,
+  exports: [MerchantDetailPageComponent]
 })
-export class MerchantDetailModule {
+export class MerchantDetailPageModule {
   
-} */
+} 

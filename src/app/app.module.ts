@@ -9,13 +9,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
-import {MerchantDetailComponent} from '../pages/merchants/merchant-detail/merchant-detail.component'
 
 @NgModule({
   declarations: [
     MyApp,
-    TabsPage,
-   MerchantDetailComponent
+  /*   TabsPage,
+    MerchantDetailComponent */
     /*AboutPage,
     ContactPage,
     TabsPage
@@ -29,8 +28,8 @@ import {MerchantDetailComponent} from '../pages/merchants/merchant-detail/mercha
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    TabsPage,
-    MerchantDetailComponent
+   /*  TabsPage,
+    MerchantDetailComponent */
     /*AboutPage,
     ContactPage,
     TabsPage

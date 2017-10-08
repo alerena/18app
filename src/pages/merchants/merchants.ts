@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {MerchantDetailComponent} from './merchant-detail/merchant-detail.component'
 import {Merchant} from '../../models/merchant.model'
 import {MerchantsService} from './merchants.service';
 /**
@@ -35,7 +34,7 @@ export class MerchantsPage {
 
   onMerchantSelect(){
     console.log(JSON.stringify({}))
-       this.navCtrl.push(MerchantDetailComponent, {
+       this.navCtrl.push('MerchantDetailPageComponent', {
       merchant: {}
     });   
   }
