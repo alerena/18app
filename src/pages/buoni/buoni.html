@@ -1,15 +1,23 @@
-<!--
-  Generated template for the BuoniPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>buoni</ion-title>
-  </ion-navbar>
-
+    
+    <ion-navbar color="blue-header">
+        <ion-title text-left>
+            I tuoi buoni
+        </ion-title>
+        <ion-buttons start style="margin-right:0">
+          <button ion-item icon-only color="royal" class="transparent" no-lines>
+            <h1 style="font-size:15px">Credito</h1>
+            <p style="font-size:15px;font-weight:bold">{{user.credito}}€</p>
+          </button>
+        </ion-buttons>
+        <ion-buttons end>
+          <button style="padding:0" ion-item icon-only color="royal" class="transparent" no-lines (click)="openMenu()">
+            <ion-icon item-right name="person" no-padding></ion-icon>
+            <ion-badge item-end color="danger">2</ion-badge>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+    
 </ion-header>
 
 
@@ -27,16 +35,43 @@
       </ion-segment-button>
     </ion-segment>
 
-      <ion-list>
+    <div [ngSwitch]="segment">
+      <ion-list *ngSwitchCase="'all'">
         <ion-item *ngFor="let item of currentData" [ngClass]="item.status" class="item-buoni">
           <ion-thumbnail item-start>
-              <i class="fa item-type" [ngClass]="{'fa-film': item.type == 'Cinema', 'fa-music': item.type == 'Concerti', 'fa-book' : item.type == 'Libri', 'fa-meh-o':item.type == 'Teatro e danza'}" aria-hidden="true"></i>
+              <i  color="primary" class="fa item-type" [ngClass]="{'fa-film': item.type == 'Cinema', 'fa-music': item.type == 'Concerti', 'fa-book' : item.type == 'Libri', 'fa-meh-o':item.type == 'Teatro e danza'}" aria-hidden="true"></i>
           </ion-thumbnail>
-          <h2>{{item.type}}</h2>
-          <p>{{item.description}}</p>
-          <p clear item-end class="item-right">{{item.amount}}</p>
+          <h2 color="primary">{{item.type}}</h2>
+          <p color="primary">{{item.description}}</p>
+          <p clear item-end class="item-right"  color="primary">{{item.amount}}</p>
           <button class="buoni-button" clear item-end (click)="itemSelected(item)"> <i class="fa fa-chevron-right"></i> </button>
         </ion-item>
       </ion-list>
-
+    </div>
+    <div [ngSwitch]="segment">
+        <ion-list *ngSwitchCase="'toSpend'">
+          <ion-item *ngFor="let item of currentData" [ngClass]="item.status" class="item-buoni">
+            <ion-thumbnail item-start>
+                <i class="fa item-type" [ngClass]="{'fa-film': item.type == 'Cinema', 'fa-music': item.type == 'Concerti', 'fa-book' : item.type == 'Libri', 'fa-meh-o':item.type == 'Teatro e danza'}" aria-hidden="true"></i>
+            </ion-thumbnail>
+            <h2>{{item.type}}</h2>
+            <p>{{item.description}}</p>
+            <p clear item-end class="item-right">{{item.amount}}</p>
+            <button class="buoni-button" clear item-end (click)="itemSelected(item)"> <i class="fa fa-chevron-right"></i> </button>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div [ngSwitch]="segment">
+          <ion-list *ngSwitchCase="'spent'">
+            <ion-item *ngFor="let item of currentData" [ngClass]="item.status" class="item-buoni">
+              <ion-thumbnail item-start>
+                  <i class="fa item-type" [ngClass]="{'fa-film': item.type == 'Cinema', 'fa-music': item.type == 'Concerti', 'fa-book' : item.type == 'Libri', 'fa-meh-o':item.type == 'Teatro e danza'}" aria-hidden="true"></i>
+              </ion-thumbnail>
+              <h2>{{item.type}}</h2>
+              <p>{{item.description}}</p>
+              <p clear item-end class="item-right">{{item.amount}}</p>
+              <button class="buoni-button" clear item-end (click)="itemSelected(item)"> <i class="fa fa-chevron-right"></i> </button>
+            </ion-item>
+          </ion-list>
+        </div>
 </ion-content>

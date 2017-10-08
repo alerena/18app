@@ -31,7 +31,7 @@ export class MerchantsPage {
 
   onMerchantSelect(){
     console.log(JSON.stringify({}))
-       this.navCtrl.push(MerchantDetailComponent, {
+       this.navCtrl.push('MerchantDetailPageComponent', {
       merchant: {}
     });   
   }

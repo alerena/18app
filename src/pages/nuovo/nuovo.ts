@@ -2,27 +2,25 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events, MenuController } from 'ionic-angular';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
+import {BuoniService } from '../../services/buoni.service';
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
-  providers: [UserService]
+  selector: 'page-nuovo',
+  templateUrl: 'nuovo.html',
+  providers: [UserService, BuoniService]
 })
-export class HomePage {
-
+export class NuovoPage {
   public user: User;
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams, private userService: UserService, public events:Events, public menu: MenuController) {
+  public categories: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private userService: UserService, public events:Events, private buoniService: BuoniService, public menu: MenuController) {
     this.user = new User();
     this.userService.retrieveUser().then((user: User) => {
-      console.log(user);
       this.user = user;
       this.events.publish('loaduser', this.user);
     });
-  }
-
-  public goToHome(){
-    this.navCtrl.push('HomePage');
+    this.buoniService.getCategory().then((categories) => {
+      this.categories = JSON.parse(""+categories);
+    })
   }
 
   public openMenu(){
@@ -30,8 +28,5 @@ export class HomePage {
     m.open();
   }
 
-  public goToNuovo(){
-    this.navCtrl.push('NuovoPage');
-  }
 
 }

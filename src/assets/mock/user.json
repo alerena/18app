@@ -2,9 +2,9 @@
     "name": "Mario",
     "lastname" : "Rossi",
     "cf": "RSSMRA98T10A562S",
-    "birth" : 631188671,
+    "birthDate" : "10/12/1998",
     "birthCity" : "San Giuliano Terme (PI)",
-    "Residenza": "Viale della repubblica 171, 31100 Treviso (TV)",
+    "residenza": "Viale della repubblica 171, 31100 Treviso (TV)",
     "tel" : 3331234567,
     "mail" : "mario.rossi@email.it",
     "credito" : 174

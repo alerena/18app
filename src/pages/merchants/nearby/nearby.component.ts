@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
-import {MerchantsService} from '../merchants.service';
-import {Merchant} from '../../../models/merchant.model'
+import { MerchantsService } from '../merchants.service';
+import { Merchant } from '../../../models/merchant.model'
 import { NavController, NavParams } from 'ionic-angular';
-import {MerchantDetailComponent} from '../merchant-detail/merchant-detail.component';
+import { MerchantDetailPageComponent } from '../merchant-detail/merchant-detail';
 
 /**
  * Generated class for the NegoziPage page.
@@ -20,27 +20,27 @@ import {MerchantDetailComponent} from '../merchant-detail/merchant-detail.compon
      MerchantDetailComponent
    ]   */
 })
-export class NearbyComponent implements OnInit{
+export class NearbyComponent implements OnInit {
 
   private merchants: Merchant[]
-   /* constructor(public navCtrl: NavController, public navParams: NavParams) {
-  } */
-  constructor(private merchantsService: MerchantsService, public navCtrl: NavController, public navParams: NavParams){}
- 
+  /* constructor(public navCtrl: NavController, public navParams: NavParams) {
+ } */
+  constructor(private merchantsService: MerchantsService, public navCtrl: NavController, public navParams: NavParams) { }
+
   /* ionViewDidLoad() {
     console.log('ionViewDidLoad NegoziPage');
   } */
   ngOnInit() {
-   console.log('nearby init')
+    console.log('nearby init')
     console.log(this.merchantsService.getMerchants())
     this.merchants = this.merchantsService.getMerchants();
   }
 
-  onMerchantSelect(){
+  onMerchantSelect() {
     console.log(JSON.stringify({}))
-       this.navCtrl.push("MerchantDetail", {
+    this.navCtrl.push("MerchantDetail", {
       merchant: {}
-    });   
+    });
   }
 
 }

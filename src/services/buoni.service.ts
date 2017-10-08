@@ -18,6 +18,14 @@ export class BuoniService {
     })
   }
 
+  getCategory() {
+    return new Promise((resolve, reject) => {
+      this.http.get('../../assets/mock/buono_category.json').subscribe(data => {
+        resolve(data["_body"]);
+      });
+    })
+  }
+
   getData() {
     console.log(this.data);
     return this.data;

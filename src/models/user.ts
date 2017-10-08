@@ -3,7 +3,7 @@ export class User {
     private _name : string;
     private _lastname : string;
     private _cf : string;
-    private _birthDate : number;
+    private _birthDate : string;
     private _birthCity : string;
     private _residenza : string;
     private _tel : number;
@@ -46,10 +46,10 @@ export class User {
         this._residenza = v;
     }
     
-    public get birthDate() : number {
+    public get birthDate() : string {
         return this._birthDate;
     }
-    public set birthDate(v : number) {
+    public set birthDate(v : string) {
         this._birthDate = v;
     }
     
@@ -76,15 +76,15 @@ export class User {
 
     public static create(user: any){
         let u = new User();
-        u.birthCity = user._birthCity;
-        u.birthDate = user._birthDate;
-        u.cf = user._cf;
-        u.credito = user._credito;
-        u.lastname = user._lastname; 
-        u.mail = user._mail;
-        u.name = user._name;
-        u.residenza = user._residenza;
-        u.tel = user._tel;
+        u.birthCity = user.birthCity;
+        u.birthDate = user.birthDate;
+        u.cf = user.cf;
+        u.credito = user.credito;
+        u.lastname = user.lastname; 
+        u.mail = user.mail;
+        u.name = user.name;
+        u.residenza = user.residenza;
+        u.tel = user.tel;
         return u;
     }
     

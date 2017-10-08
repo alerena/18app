@@ -1,3 +1,24 @@
 page-home {
+    font-family: "Titillium Web", sans-serif;
+    .transparent{
+        background: transparent;
+        color: white;
+        text-align:right;
 
+        p{
+            color: white !important;
+        }
+    }
+
+    .credito{
+        font-size: 40px;
+        color: #00c5ca;
+    }
+
+    .button-add{
+        color: white;
+        font-size: 30px;
+        border-radius: 50%;
+        background: #2079d4;
+    }
 }

@@ -1,30 +1,34 @@
-import { Component } from '@angular/core';
-import { Platform, Events } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Events, Nav, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Keyboard } from '@ionic-native/keyboard';
-
+import {User} from '../models/user';
 @Component({
   templateUrl: 'app.html',
   providers: [Keyboard]
 })
 export class MyApp {
+  @ViewChild(Nav) nav: Nav;
+  
   rootPage:any;
-  //rootPage:any = TabsPage;
-
+  user: User
   pages: Array<{title: string, component: any, icon: string}>;
 
-  constructor(private platform: Platform, private statusBar: StatusBar, private splashScreen: SplashScreen, public keyboard: Keyboard, public events: Events) {
-    // used for an example of ngFor and navigation
+  constructor(private platform: Platform, private statusBar: StatusBar, private splashScreen: SplashScreen, public keyboard: Keyboard, public events: Events, public menu: MenuController) {
+    this.user = new User();
     this.pages = [
-      { title: 'Profilo', component: 'Home', icon: 'calendar' },
-      //{ title: 'Corsi', component: 'Corsi', icon: 'clipboard' },
-      { title: 'Notifiche', component: 'DisciplineList', icon: 'list-box' },
-      { title: 'Logout', component: 'SubscriptionList', icon: 'folder' }
+      { title: 'Profilo', component: 'ProfiloPage', icon: 'contact' },
+      { title: 'Notifiche', component: 'NotificationPage', icon: 'notifications' },
+      { title: 'Logout', component: 'LoginPage', icon: 'exit' }
     ];
 
     this.events.subscribe('login', () => {
       this.rootPage = 'TabsPage';
+    });
+
+    this.events.subscribe('loaduser', (user) => {
+      this.user = user;
     });
 
 
@@ -79,5 +83,16 @@ export class MyApp {
       });*/
         //this.chooseLang();    
     });
+  }
+
+
+  public openPage(page){
+    this.menu.close();
+    if(page.component == 'LoginPage'){
+      this.rootPage = "LoginPage";
+      this.nav.setRoot(page.component);
+    }else{
+      this.nav.push(page.component);
+    }
   }
 }

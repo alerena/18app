@@ -5,14 +5,37 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>home</ion-title>
+    
+  <ion-navbar color="blue-header">
+    <ion-title text-left>
+        <img style="height: 100%;vertical-align: middle;" src="../../assets/img/logo_50.png">18app
+    </ion-title>
+    <ion-buttons start style="margin-right:0">
+      <button ion-item icon-only color="royal" class="transparent" no-lines (click)="goToHome()">
+        <h1 style="font-size:15px">Credito</h1>
+        <p style="font-size:15px;font-weight:bold">{{user.credito}}€</p>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-item icon-only color="royal" class="transparent" no-lines (click)="openMenu()">
+        <ion-icon item-right name="person" no-padding></ion-icon>
+        <ion-badge item-end color="danger">2</ion-badge>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
+    
 </ion-header>
+<!--<our-header title="img"></our-header>-->
 
 
 <ion-content padding>
-safdldfgvjhaksbfgi
+  <h3 text-center margin-top>Benvenuto {{user.name}}, ti restano</h3>
+  <h1 text-center class="credito">{{user.credito}}€</h1>
+  <div text-center style="width: 100%" margin-top>
+    <img src="../../assets/img/add_1.png" style="width:40%" (click)="goToNuovo()"/>
+  </div>
+  <h3 text-center style="color: #00c5ca;">NUOVO BUONO</h3>
+  <div text-center style="margin-top:20px">
+    <button text-center large ion-button><ion-icon name="locate"></ion-icon>&emsp;SONO GI&Aacute; IN NEGOZIO</button>
+  </div>
 </ion-content>

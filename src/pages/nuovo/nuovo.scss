@@ -1,4 +1,8 @@
-page-buoni {
+page-nuovo {
+    ion-item h2, ion-item button, ion-item i{
+        color: blue;
+    }
+
     .item-type{
         font-size: 30px;
         padding: 24px;
@@ -19,7 +23,7 @@ page-buoni {
     .spent .item-right{
         text-decoration: line-through;
     }
-    .item-buoni .buoni-button{
+    button{
         background-color: transparent;
     }
 }

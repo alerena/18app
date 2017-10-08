@@ -1,0 +1,37 @@
+<ion-header>
+    
+    <ion-navbar color="blue-header">
+        <ion-title text-left>
+            Il tuo profilo
+        </ion-title>
+        <ion-buttons start style="margin-right:0">
+          <button ion-item icon-only color="royal" class="transparent" no-lines (click)="goToHome()">
+            <h1 style="font-size:15px">Credito</h1>
+            <p style="font-size:15px;font-weight:bold">{{user.credito}}€</p>
+          </button>
+        </ion-buttons>
+        <ion-buttons end>
+          <button style="padding:0" ion-item icon-only color="royal" class="transparent" no-lines (click)="openMenu()">
+            <ion-icon item-right name="person" no-padding></ion-icon>
+            <ion-badge item-end color="danger">2</ion-badge>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+    
+</ion-header>
+<!--<our-header title="Il tuo profilo"></our-header>-->
+
+<ion-content padding>
+  <h1 margin-bottom>{{user.name}} {{user.lastname}}</h1>
+  <p margin-top>Codice Fiscale</p>
+  <h5>{{user.cf}}</h5>
+  <p no-margin>Data e Luogo di Nascita</p>
+  <h5>{{user.birthDate}} {{user.birthCity}}</h5>
+  <p>Residenza</p>
+  <h5>{{user.residenza}}</h5>
+  <p>Recapiti</p>
+  <h5>{{user.tel}}</h5>
+  <h5>{{user.mail}}</h5>
+  <p margin-top>Questo è il riepilogo dei dati della tua identità SPID: per modificarli rivolgiti al tuo gestore</p>
+  <img src="../../assets/img/spid_s.png" style="width:20%">
+</ion-content>

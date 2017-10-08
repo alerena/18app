@@ -1,0 +1,24 @@
+[{
+    "name": "Cinema",
+    "icon": "fa-film"
+},
+{
+    "name": "Concerti",
+    "icon": "fa-music"
+},
+{
+    "name": "Eventi Culturali",
+    "icon": ""
+},
+{
+    "name": "Libri",
+    "icon": "fa-book"
+},
+{
+    "name": "Musei, Monumenti, Parchi naturali",
+    "icon": ""
+},
+{
+    "name": "Teatro e Danza",
+    "icon": ""
+}]

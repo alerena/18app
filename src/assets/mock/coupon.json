@@ -1,0 +1,7 @@
+[
+    {"type": "Cinema", "amount": 12, "description": "Biglietto d'ingresso", "status": "toSpend"},
+    {"type": "Concerti", "amount": 24, "description": "Biglietto d'ingresso", "status": "toSpend"},
+    {"type": "Teatro e Danza", "amount": 250, "description": "Abbonamento", "status":"toSpend"},
+    {"type": "Libri", "amount": 35.6, "description": "Ebook", "status": "spent"},
+    {"type": "Cinema", "amount": 8.9, "description": "Abbonamento", "status": "spent"}
+]

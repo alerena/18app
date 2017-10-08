@@ -9,6 +9,7 @@ import { MenuController, IonicPage} from 'ionic-angular';
 export class TabsPage {
   tab1Root = 'HomePage';
   tab2Root = 'MerchantsPage';
+  tab4Root = 'BuoniPage'
 
   constructor(public menu: MenuController) {
     this.menu.enable(true, "menu");

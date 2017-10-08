@@ -18,7 +18,7 @@
     font-family: 'Titillium Web';
     font-style: normal;
     font-weight: 200;
-    src: local('Titillium WebThin'), local('TitilliumWeb-Thin'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr-K9kSItTeDn2USN0q77Oh4.woff) format('woff');
+    src: local('Titillium WebRegular'), local('TitilliumWeb-Regular'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v1/anMUvcNT0H1YN4FII8wpr-K9kSItTeDn2USN0q77Oh4.woff) format('woff');
  }
 
  ion-icon {
@@ -30,4 +30,14 @@
         height: 1em;
         background:url(../assets/img/spid.svg);
     } 
+}
+
+.transparent{
+    background: transparent;
+    color: white;
+    text-align:right;
+
+    p{
+        color: white !important;
+    }
 }
