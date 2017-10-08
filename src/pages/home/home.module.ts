@@ -1,26 +1,15 @@
 import { NgModule } from '@angular/core';
-import { IonicPageModule } from 'ionic-angular';
+import { IonicPageModule, IonicModule, IonicPage } from 'ionic-angular';
 import { HomePage } from './home';
-import {UserDetailComponent} from './userComp/user-detail.component';
-import {UserPlatfondComponent} from './userPlatfond/user-platfond.component';
-import {AboutPage} from '../about/about';
+import {HomeDetailPageModule} from './homeDetail/home-detail.module';
 @NgModule({
   declarations: [
-    HomePage,
-    UserDetailComponent,
-    UserPlatfondComponent,
-    AboutPage
+    HomePage
   ],
   imports: [
+    HomeDetailPageModule,
     IonicPageModule.forChild(HomePage),
   ],
-  entryComponents: [
-    UserDetailComponent,
-    UserPlatfondComponent,
-    AboutPage
-  ],
-  exports: [
-    UserPlatfondComponent
-  ]
+  //exports: [HomePage]
 })
 export class HomePageModule {}

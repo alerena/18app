@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
-import {UserPlatfondComponent} from './userPlatfond/user-platfond.component';
-import {AboutPage} from '../about/about';
+import { HomeDetailPage } from './homeDetail/home-detail';
+
 @IonicPage()
 @Component({
   selector: 'page-home',
@@ -23,11 +23,10 @@ export class HomePage {
   }
 
   goPl(){
-    this.navCtrl.push(UserPlatfondComponent)
   }
 
   public go(){
-    this.navCtrl.push(AboutPage);
+    this.navCtrl.push('HomeDetailPage');
   }
 
   ionViewDidLoad() {
